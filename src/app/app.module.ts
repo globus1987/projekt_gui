@@ -12,13 +12,18 @@ import { TestsuiteService } from './services/testsuite.service';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { DetailsComponent } from './src/details/details.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    TestSuiteListComponent
+    TestSuiteListComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,8 +34,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatIconModule,
     HttpClientModule,
     MatTableModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule
   ],
+  entryComponents:[ TestSuiteListComponent,DetailsComponent ],
   providers: [TestsuiteService],
   bootstrap: [AppComponent]
 })
